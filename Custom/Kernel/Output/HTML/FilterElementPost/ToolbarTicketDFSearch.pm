@@ -51,7 +51,7 @@ sub Run {
 		if ($DynamicField->{'FieldType'} eq 'Text')
 		{
 			$InputType=qq~
-			<input type='text' size='25' name='Search_DynamicField_$DynamicField->{Name}' id='Search_DynamicField_$DynamicField->{Name}' title='$DynamicField->{Label}'/>"
+			<input type='text' size='25' name='Search_DynamicField_$DynamicField->{Name}' id='Search_DynamicField_$DynamicField->{Name}' title='$DynamicField->{Label}'/>
 			~;
 		}
 		elsif ($DynamicField->{'FieldType'} eq 'Dropdown')
@@ -89,9 +89,10 @@ sub Run {
 		my $Form = qq~
 			<li class="Extended" style="margin-left: 10px">
 				<form action="$Baselink" method="post" name="SearchTicketDF">
+				    <label for="DF">$DynamicField->{Label}</label>
 					<input type="hidden" name="Action" value="AgentTicketSearch"/>
 					<input type="hidden" name="Subaction" value="Search"/>
-					<input type="hidden" name="ShownAttributes" value="LabelSearch_DynamicField_$DynamicField->{Label}"/>
+					<input type="hidden" name="ShownAttributes" value="LabelSearch_DynamicField_$DynamicField->{Name}"/>
 					$InputType
 					<button onclick="$('#SearchTicketDF').attr('target','_blank');">
 					<span class="fa fa-search"></span>
