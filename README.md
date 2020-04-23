@@ -2,7 +2,7 @@
 - Built for OTRS CE v 6.0.x  
 - This module enable toolbar module for searching specific ticket dynamic field value.  
 
-1. **Only support for Object Type = Ticket and Field Type = Text, Dropdown
+1. **Only support for Object Type = Ticket and Field Type = Text, Dropdown**
 
 2. Enable the dynamic field searching name at System Configuration > Ticket::Frontend::AgentTicketSearch###DynamicField
 
